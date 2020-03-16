@@ -1,0 +1,11 @@
+.navbar.transparent {
+    background-color: transparent !important;
+    border: none;
+    color: white;
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+  }
+  
+.navbar {
+    transition: background-color 1s ease 0s;
+}
