@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from './components/Header'
+import Header from './components/Header';
+import SliderSection from './containers/SliderSection';
 import logo from './logo.svg';
 import './App.css';
 
@@ -16,6 +17,10 @@ function App() {
         <div className="text-center">
           <img src={logo} className="App-logo" alt="react" />
         </div>
+      </div>
+
+      <div id = "project-section">
+        <SliderSection />
       </div>
     </React.Fragment>
   );
