@@ -1,0 +1,8 @@
+.slide-title {
+    color: #000;
+}
+
+.carousel-indicators li {
+    background-color: #000 !important;
+    opacity: .3 !important;
+}

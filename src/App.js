@@ -18,10 +18,7 @@ function App() {
           <img src={logo} className="App-logo" alt="react" />
         </div>
       </div>
-
-      <div id = "project-section">
-        <SliderSection />
-      </div>
+      <SliderSection />
     </React.Fragment>
   );
 }

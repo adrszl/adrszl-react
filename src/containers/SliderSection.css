@@ -1,0 +1,14 @@
+#project-section {
+    background: linear-gradient(to bottom, #596a72 0%,#cedce7 65%);
+    min-height: 100vh !important;
+    margin: 0;
+}
+
+#covering {
+    background: hsla(360, 100%, 100%, 0.7);
+    min-height: 85vh !important;
+}
+
+#projectsTitle {
+    padding-top: 28px;
+}
