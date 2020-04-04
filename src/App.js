@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import SliderSection from './containers/SliderSection';
+import AboutSection from './containers/AboutSection';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
         </div>
       </div>
       <SliderSection />
+      <AboutSection />
     </React.Fragment>
   );
 }

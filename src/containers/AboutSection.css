@@ -1,0 +1,9 @@
+#about-section {
+    background: linear-gradient(to bottom, #596a72 0%,#cedce7 65%);
+    min-height: 100vh !important;
+    margin: 0;
+}
+
+#aboutTitle {
+    padding-top: 28px;
+}
