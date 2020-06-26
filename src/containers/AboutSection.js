@@ -179,9 +179,50 @@ function AboutSection() {
                     link={"https://www.sololearn.com/Certificate/1082-4703765/pdf/"}
                     type={'learning'}/>
             </div>
-            <h2 className="text-center">Experience</h2>
+            <h2 className="text-center my-4">Experience</h2>
             <div className="row">
-                {/* karty doświadczenia zawodowego */}
+                <ExperienceCard 
+                    order={1} 
+                    title={"Front End Developer"} 
+                    year={"APR 2020 - NOW"} 
+                    details={"TTMS"} 
+                    link={"https://ttms.pl/en/"}
+                    type={"experience"}/>
+                <ExperienceCard 
+                    order={2} 
+                    title={"Full Stack Developer"} 
+                    year={"JUN 2019 - FEB 2020"} 
+                    details={"OAKnode"} 
+                    link={"https://oaknode.com/"}
+                    type={"experience"}/>
+                <ExperienceCard 
+                    order={3} 
+                    title={"Front End Developer"} 
+                    year={"JAN 2019 - APR 2019"} 
+                    details={"Sealcode"} 
+                    link={"https://www.sealcode.org/"}
+                    type={"experience"}/>
+                <ExperienceCard 
+                    order={4} 
+                    title={"Junior JavaScript/React Developer"} 
+                    year={"DEC 2018 - DEC 2019"} 
+                    details={"Sputnik Software"} 
+                    link={"http://sputnik.pl/"}
+                    type={"experience"}/>
+                <ExperienceCard 
+                    order={5} 
+                    title={"Appium Tester"} 
+                    year={"OCT 2017 - AUG 2018"} 
+                    details={"Sputnik Software"} 
+                    link={"http://sputnik.pl/"}
+                    type={"experience"}/>
+                <ExperienceCard 
+                    order={6} 
+                    title={"Junior Front End Developer"} 
+                    year={"DEC 2016 - JUN 2017"} 
+                    details={"Sputnik Software"} 
+                    link={"http://sputnik.pl/"}
+                    type={"experience"}/>
             </div>
         </div>
     );
