@@ -3,6 +3,7 @@ import Header from './components/Header';
 import WelcomeSection from './components/WelcomeSection';
 import SliderSection from './containers/SliderSection';
 import AboutSection from './containers/AboutSection';
+import ContactSection from './containers/ContactSection';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <WelcomeSection />
       <SliderSection />
       <AboutSection />
+      <ContactSection />
     </React.Fragment>
   );
 }
