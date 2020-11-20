@@ -1,0 +1,14 @@
+.media-card {
+    width: 150px;
+    height: auto;
+}
+
+.media-card:hover {
+    box-shadow: 5px 5px 10px 2px rgba(0,0,0,0.75);
+    border-radius: .25rem !important;
+    height: fit-content;
+}
+
+.media-card img {
+    min-height: 150px;
+}
