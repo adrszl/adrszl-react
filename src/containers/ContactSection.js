@@ -2,6 +2,7 @@ import React from 'react';
 import ContactCanvas from '../components/ContactCanvas';
 import ContactCard from '../components/ContactCard';
 import MediaCard from '../components/MediaCard';
+import ContactForm from '../components/ContactForm';
 import './ContactSection.css';
 
 // IMAGES
@@ -28,70 +29,71 @@ function ContactSection() {
             <div>
                 {/* <p id="photoSource" className="text-center">Photo source: www.programmerlife.club</p> */}
                 <img id="authorsPhoto" src={myPhoto} alt="Adrian Szlegel" />
-            </div> 
+            </div>
             <div class="d-flex flex-row flex-wrap justify-content-center mb-5">
-                <ContactCard 
-                    photo={myPhoto} 
-                    photoAlt={"Adrian Szlegel on Fiverr"} 
-                    logo={fiverrLogo} 
-                    logoAlt={"Fiverr"} 
+                <ContactCard
+                    photo={myPhoto}
+                    photoAlt={"Adrian Szlegel on Fiverr"}
+                    logo={fiverrLogo}
+                    logoAlt={"Fiverr"}
                     title={"Seller"}
                     subtitle={"Programming & Tech"}
                     href={"https://www.fiverr.com/adrian_szlegel"}
                     hrefLabel={"Check out my Gigs"} />
-                <ContactCard 
-                    photo={myPhoto} 
-                    photoAlt={"Adrian Szlegel on Freelancer"} 
-                    logo={freelancerLogo} 
-                    logoAlt={"Freelancer.com"} 
+                <ContactCard
+                    photo={myPhoto}
+                    photoAlt={"Adrian Szlegel on Freelancer"}
+                    logo={freelancerLogo}
+                    logoAlt={"Freelancer.com"}
                     title={"Adrian Szlegel"}
                     subtitle={"Full Stack Developer"}
                     href={"https://www.freelancer.com/affiliates/email/33627630/"}
                     hrefLabel={"Hire me on Freelancer.com"} />
             </div>
-            <h2 class = "text-center mb-4">You'll also find me here:</h2>
+            <h2 class="text-center mb-4">You'll also find me here:</h2>
             <div class="d-flex flex-row flex-wrap justify-content-center mb-5">
-                <MediaCard 
+                <MediaCard
                     logo={soloLearnLogo}
                     logoAlt={"SoloLearn"}
                     title={"SoloLearn"}
                     href={"https://www.sololearn.com/Profile/4703765"} />
-                <MediaCard 
+                <MediaCard
                     logo={hackerRankLogo}
                     logoAlt={"HackerRank"}
                     title={"HackerRank"}
                     href={"https://www.hackerrank.com/adrian95999"} />
-                <MediaCard 
+                <MediaCard
                     logo={codeWarsLogo}
                     logoAlt={"CodeWars"}
                     title={"CodeWars"}
                     href={"https://www.codewars.com/users/adrszl"} />
-                <MediaCard 
+                <MediaCard
                     logo={courseraLogo}
                     logoAlt={"Coursera"}
                     title={"Coursera"}
                     href={"https://www.coursera.org/user/09c9c205c6d1c9280e5d1becd5032efa"} />
-                <MediaCard 
+                <MediaCard
                     logo={gitHubLogo}
                     logoAlt={"GitHub"}
                     title={"GitHub"}
                     href={"https://github.com/adrszl"} />
-                <MediaCard 
+                <MediaCard
                     logo={stackOverflowLogo}
                     logoAlt={"Stack Overflow"}
                     title={"Stack Overflow"}
                     href={"https://stackoverflow.com/users/10791994/adrian95999"} />
-                <MediaCard 
+                <MediaCard
                     logo={udemyLogo}
                     logoAlt={"Udemy"}
                     title={"Udemy"}
                     href={"https://www.udemy.com/user/adrian-szlegel/"} />
-                <MediaCard 
+                <MediaCard
                     logo={khanAcademyLogo}
                     logoAlt={"Khan Academy"}
                     title={"Khan Academy"}
                     href={"https://www.khanacademy.org/profile/kaid_839089160785788192455283/"} />
             </div>
+            <ContactForm />
         </div>
     );
 }

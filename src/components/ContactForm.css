@@ -1,0 +1,16 @@
+#contactForm {
+    background-color: #fff;
+    max-width: 900px;
+    border-radius: 9px;
+    margin: 0 auto !important;
+    padding: 10px;
+}
+
+#errorHandler {
+    color: red;
+}
+
+.check-it {
+    position: absolute;
+    left: -5000px;
+}
