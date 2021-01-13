@@ -9,3 +9,13 @@
 .navbar {
     transition: background-color 1s ease 0s;
 }
+
+.nav-link:hover {
+  color: #3281ff !important;
+  border: 1px solid #3281ff;
+  border-radius: 9px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: .4rem !important;
+  padding-left: .5rem !important;
+}
