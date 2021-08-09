@@ -1,5 +1,4 @@
 import React from 'react';
-import ContactCanvas from '../components/ContactCanvas';
 import ContactCard from '../components/ContactCard';
 import MediaCard from '../components/MediaCard';
 import ContactForm from '../components/ContactForm';

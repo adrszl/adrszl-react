@@ -51,7 +51,7 @@ function ExperienceCard(props) {
             <h6 className="card-subtitle mb-2 text-muted"><time>{props.year}</time></h6>
             <p className="card-text">{props.details}</p>
             {props.link ? 
-                <a href={props.link} className="card-link" target="_blank">{linkLabel}</a>
+                <a href={props.link} className="card-link" target="_blank" rel="noopener noreferrer">{linkLabel}</a>
                 : null }
             </div>
         </div> 
