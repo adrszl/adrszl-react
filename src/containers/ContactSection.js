@@ -9,6 +9,7 @@ import myPhoto from '../img/profilowe1.jpg';
 import gitHubLogo from '../img/github-logo.png'
 const fiverrLogo = 'https://d2nb1f6l8b7ky0.cloudfront.net/fiverr_icon.png';
 const freelancerLogo = 'https://www.freelancer.com/static/css/images/landingpage/hireme-widget-builder/fl-bird-icon.png';
+const upworkLogo = 'https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/2f8723b99fbd7fa8ba5ca3f7653f9112';
 const soloLearnLogo = 'https://lh3.googleusercontent.com/6E112cbsqydvxECh-HmlXvOG5SGXCco4jv_aXZMeMKErNEsDA06Niq7p8CULJ40_6r7G';
 const hackerRankLogo = 'https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png';
 const codeWarsLogo = 'https://i.imgur.com/2LTDqtO.png';
@@ -48,6 +49,17 @@ function ContactSection() {
                     subtitle={"Full Stack Developer"}
                     href={"https://www.freelancer.com/affiliates/email/33627630/"}
                     hrefLabel={"Hire me on Freelancer.com"} />
+                <ContactCard
+                    photo={myPhoto}
+                    photoAlt={"Adrian Szlegel on Upwork"}
+                    logo={upworkLogo}
+                    logoAlt={"Upwork.com"}
+                    title={"Adrian Szlegel"}
+                    subtitle={"Full Stack Developer"}
+                    href={"https://www.upwork.com/freelancers/~01261b4633aacd924a?viewMode=1"}
+                    hrefLabel={"Hire me on upwork.com"} 
+                    customImgClasses={"mt-auto"} 
+                    customImgStyles={{width: "76px"}} />
             </div>
             <h2 class="text-center mb-4">You'll also find me here:</h2>
             <div class="d-flex flex-row flex-wrap justify-content-center mb-5">
