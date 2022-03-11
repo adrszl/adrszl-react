@@ -22,6 +22,8 @@ import project8 from '../img/project8.png';
 import project9 from '../img/project9.png';
 import project10 from '../img/project10.png';
 
+import project13 from '../img/project13.png';
+
 // TOOLTIPS
 const tooltipsContent = {
     personalPortfolio: 'Simple page intended to be "Web business card"',
@@ -33,12 +35,45 @@ const tooltipsContent = {
     palindromeChecker: 'Checks if given phrase is a palindrome',
     usTelephoneNumberValidator: 'Validator checks if given number is valid US one',
     caesarsCipher: 'Encrypts and decrypts given phrase with Caesars Cipher',
-    commercialWebsite1: 'Personal website for Mr. Arkadiusz Trajdos'
+    commercialWebsite1: 'Personal website for Mr. Arkadiusz Trajdos',
+    commercialWebsite4: 'Website for Magna Polonia academic corporation'
 }
 
 function CarouselSlider() {
     return(
         <Carousel>
+            <Carousel.Item>
+                <img className="d-block w-100" src={project10} alt="Tenth project" />
+                <Carousel.Caption>
+                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.commercialWebsite1 }</Tooltip>}>
+                        <h3 className="slide-title">
+                            <span className="mr-2">Website</span>
+                            <span className="badge badge-secondary mr-2">2019</span>
+                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
+                            <span className="badge badge-pill badge-primary mr-2">CSS</span>
+                            <span className="badge badge-pill badge-primary mr-2">JS</span>
+                            <span className="badge badge-pill badge-primary mr-2">PHP</span>
+                            <span className="badge badge-pill badge-primary">Wordpress</span>
+                        </h3>
+                    </OverlayTrigger>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img className="d-block w-100" src={project13} alt="Thirteenth project" />
+                <Carousel.Caption>
+                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.commercialWebsite4 }</Tooltip>}>
+                        <h3 className="slide-title">
+                            <span className="mr-2">Website</span>
+                            <span className="badge badge-secondary mr-2">2018 - now</span>
+                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
+                            <span className="badge badge-pill badge-primary mr-2">CSS</span>
+                            <span className="badge badge-pill badge-primary mr-2">JS</span>
+                            <span className="badge badge-pill badge-primary mr-2">PHP</span>
+                            <span className="badge badge-pill badge-primary">Wordpress</span>
+                        </h3>
+                    </OverlayTrigger>
+                </Carousel.Caption>
+            </Carousel.Item>
             <Carousel.Item>
                 <img className="d-block w-100" src={project1} alt="First project" />
                 <Carousel.Caption>
@@ -131,7 +166,6 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project8} alt="Eighth project" />
                 <Carousel.Caption>
-                    <h3 className="slide-title">US Telephone Number Validator</h3>
                     <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.usTelephoneNumberValidator }</Tooltip>}>
                         <h3 className="slide-title">
                             <span className="mr-2">US Telephone Number Validator</span>
@@ -149,22 +183,6 @@ function CarouselSlider() {
                             <span className="mr-2">Caesars Cipher</span>
                             <span className="badge badge-secondary mr-2">2019</span>
                             <span className="badge badge-pill badge-primary">JS</span>
-                        </h3>
-                    </OverlayTrigger>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img className="d-block w-100" src={project10} alt="Tenth project" />
-                <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.commercialWebsite1 }</Tooltip>}>
-                        <h3 className="slide-title">
-                            <span className="mr-2">Website</span>
-                            <span className="badge badge-secondary mr-2">2019</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary mr-2">CSS</span>
-                            <span className="badge badge-pill badge-primary mr-2">JS</span>
-                            <span className="badge badge-pill badge-primary mr-2">PHP</span>
-                            <span className="badge badge-pill badge-primary">Wordpress</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
