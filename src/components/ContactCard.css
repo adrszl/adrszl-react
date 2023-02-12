@@ -2,3 +2,7 @@
     width: 130px;
     height: auto;
 }
+
+.card-body .card-link {
+    margin-top: auto;
+}
