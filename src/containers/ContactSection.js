@@ -32,8 +32,6 @@ function ContactSection() {
             </div>
             <div class="d-flex flex-row flex-wrap justify-content-center mb-5">
                 <ContactCard
-                    photo={myPhoto}
-                    photoAlt={"Adrian Szlegel on Fiverr"}
                     logo={fiverrLogo}
                     logoAlt={"Fiverr"}
                     title={"Seller"}
@@ -41,8 +39,6 @@ function ContactSection() {
                     href={"https://www.fiverr.com/adrian_szlegel"}
                     hrefLabel={"Check out my Gigs"} />
                 <ContactCard
-                    photo={myPhoto}
-                    photoAlt={"Adrian Szlegel on Freelancer"}
                     logo={freelancerLogo}
                     logoAlt={"Freelancer.com"}
                     title={"Adrian Szlegel"}
@@ -50,8 +46,6 @@ function ContactSection() {
                     href={"https://www.freelancer.com/affiliates/email/33627630/"}
                     hrefLabel={"Hire me on Freelancer.com"} />
                 <ContactCard
-                    photo={myPhoto}
-                    photoAlt={"Adrian Szlegel on Upwork"}
                     logo={upworkLogo}
                     logoAlt={"Upwork.com"}
                     title={"Adrian Szlegel"}
