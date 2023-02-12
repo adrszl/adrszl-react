@@ -7,3 +7,9 @@
 #aboutTitle {
     padding-top: 28px;
 }
+
+.row.certifications {
+    max-width: 1330px;
+    margin: 0 auto;
+    justify-content: center;
+}
