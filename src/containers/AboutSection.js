@@ -12,9 +12,63 @@ function AboutSection() {
                 {/* karty kursów */}
                 <ExperienceCard 
                     title={"More to come..."} 
-                    year={"2023"} 
+                    year={new Date().getFullYear()} 
                     details={"I'm working hard every day to improve my qualifications"} 
                     link={false}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Executive Presence on Video Conference Calls"} 
+                    year={"JUL 2024"} 
+                    details={"Remote work, self discipline, time management, presentation skills, other"} 
+                    link={"https://www.linkedin.com/learning/certificates/2c344d377cc6faaa4f294702eb9fe768f98969280a64147eca8446c212036d09"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Building Relationships While Working from Home"} 
+                    year={"JUN 2024"} 
+                    details={"Remote work, self discipline, time management, workplace relationships, other"} 
+                    link={"https://www.linkedin.com/learning/certificates/c1e035fe22d4ebdcd17e270319d3a549894f892651e090d3ae1c5dfe362d9390"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Time Management: Working from Home"} 
+                    year={"JUN 2024"} 
+                    details={"Remote work, self discipline, time management, other"} 
+                    link={"https://www.linkedin.com/learning/certificates/14303b304660194a34da75d844a81281253a51eb26c2278ea2c7e8a29f84dd1d"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Front End Development Libraries"} 
+                    year={"JUN 2024"} 
+                    details={"HTML, CSS, JavaScript, Bootstrap, SASS, React, Redux"} 
+                    link={"https://freecodecamp.org/certification/fcc0176f6e9-28d2-4c52-b6c5-1bb0a86d1dd8/front-end-development-libraries"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Graphic Design Certification + Live Class"} 
+                    year={"MAY 2024"} 
+                    details={"Graphic design, digital marketing, other"} 
+                    link={"https://www.udemy.com/certificate/UC-d44c5617-ab55-4671-af00-b5cb17beeba2/"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"React: Ecosystem"} 
+                    year={"MAY 2024"} 
+                    details={"JavaScript, React, Redux"} 
+                    link={"https://www.linkedin.com/learning/certificates/c9494a2fd0f2bfe7ce60e11a64c66fc9e95bce4b2526e32a70bd6c1f5a475d7e"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Becoming a Digital Nomad"} 
+                    year={"FEB 2023"} 
+                    details={"Remote work, business trips, other"} 
+                    link={"https://www.linkedin.com/learning/certificates/3cbe64b7468fdadbaefe5efe943915d8bb4f4309ea434bf3ba95f9b593bd8d9e"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"Tips for Working Remotely"} 
+                    year={"FEB 2023"} 
+                    details={"Remote work, self discipline, other"} 
+                    link={"https://www.linkedin.com/learning/certificates/7d6965dd4dc660ff3e48654f5ff81fa5337fe9d837e537b59063e80f052de9fd"}
+                    type={'learning'}/>
+                <ExperienceCard 
+                    title={"React: Building Large Apps"} 
+                    year={"OCT 2022"} 
+                    details={"JavaScript, React"} 
+                    link={"https://www.linkedin.com/learning/certificates/9cfa6b976163b506b5b2d166ecf1d51ecb6a72ae88eb7bab1d27380bb69eda1b"}
                     type={'learning'}/>
                 <ExperienceCard 
                     title={"Learning webpack 4"} 
