@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactCard from '../components/ContactCard';
-import MediaCard from '../components/MediaCard';
-import ContactForm from '../components/ContactForm';
+import ContactCard from '../old-components/ContactCard';
+import MediaCard from '../old-components/MediaCard';
+import ContactForm from '../old-components/ContactForm';
 import './ContactSection.css';
 
 // IMAGES

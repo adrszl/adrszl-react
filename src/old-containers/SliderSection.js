@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from '../components/CarouselSlider';
+import Carousel from '../old-components/CarouselSlider';
 import './SliderSection.css';
 
 function SliderSection() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ExperienceCard from '../components/ExperienceCard'; 
+import ExperienceCard from '../old-components/ExperienceCard'; 
 import './AboutSection.css';
 
 function AboutSection() {
