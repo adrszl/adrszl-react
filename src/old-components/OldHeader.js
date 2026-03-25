@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.css';
+import classes from './OldHeader.module.css';
 
-function Header() {
+function OldHeader() {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -11,16 +11,16 @@ function Header() {
                 <div className="collapse navbar-collapse justify-content-md-center" id="navbarContent">
                     <ul className="navbar-nav">
                     <li data-toggle="collapse" data-target=".navbar-collapse" className="nav-item">
-                        <a className="nav-link active" href="#welcome-section">Home</a>
+                        <a className={`${classes.navLink} nav-link`} href="#welcome-section">Home</a>
                     </li>
                     <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
-                        <a className="nav-link" href="#project-section">Projects</a>
+                        <a className={`${classes.navLink} nav-link`} href="#project-section">Projects</a>
                     </li>
                     <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
-                        <a className="nav-link" href="#about-section">About</a>
+                        <a className={`${classes.navLink} nav-link`} href="#about-section">About</a>
                     </li>
                     <li className="nav-item" data-toggle="collapse" data-target=".navbar-collapse">
-                        <a className="nav-link" href="#contact-section">Contact</a>
+                        <a className={`${classes.navLink} nav-link`} href="#contact-section">Contact</a>
                     </li>
                     </ul>
                 </div>
@@ -29,4 +29,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default OldHeader;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './old-components/Header';
+import OldHeader from './old-components/OldHeader';
 import WelcomeSection from './old-components/WelcomeSection';
 import SliderSection from './old-containers/SliderSection';
 import AboutSection from './old-containers/AboutSection';
@@ -8,12 +8,14 @@ import Footer from './old-components/Footer';
 import './App.css';
 // import './global.css';
 import LoadingScreen from './components/loadingScreen';
+import Header from './components/Header';
 
 function App() {
   return (
     <React.Fragment>
-      {/* <LoadingScreen /> */}
-      <Header />
+      {/* <LoadingScreen />
+      <Header /> */}
+      <OldHeader />
       <WelcomeSection />
       <SliderSection />
       <AboutSection />

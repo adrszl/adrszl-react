@@ -10,7 +10,7 @@
     transition: background-color 1s ease 0s;
 }
 
-.nav-link:hover {
+.navLink:hover {
   color: #3281ff !important;
   border: 1px solid #3281ff;
   border-radius: 9px;
