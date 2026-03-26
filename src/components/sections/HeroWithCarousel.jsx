@@ -139,7 +139,7 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
     };
 
     return (
-        <section class="hero" id="hero">
+        <section className="hero" id="hero">
             <div className="carousel-container">
                 {/* CAROUSEL */}
                 <div
