@@ -8,7 +8,9 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
 
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
+    const intervalRef = useRef(null);
 
+    // SLIDES
     const nextSlide = useCallback(() => {
         setCurrentIndex((prev) => (prev + 1) % portfolioData.length);
     }, [portfolioData.length]);
@@ -19,27 +21,34 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
         );
     }, [portfolioData.length]);
 
-    // Resize
+    const goToSlide = (index) => {
+        clearInterval(intervalRef.current); // 👈 jak w starym kodzie
+        setCurrentIndex(index);
+    };
+
+    // RESIZE (with debounce)
     useEffect(() => {
+        let resizeTimeout;
+
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-            setIsTablet(window.innerWidth <= 1024);
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                setIsMobile(window.innerWidth <= 768);
+                setIsTablet(window.innerWidth <= 1024);
+            }, 250);
         };
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Auto slide
+    // AUTO SLIDE (startCarousel)
     useEffect(() => {
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 5000);
-
-        return () => clearInterval(interval);
+        intervalRef.current = setInterval(nextSlide, 5000);
+        return () => clearInterval(intervalRef.current);
     }, [nextSlide]);
 
-    // Keyboard navigation
+    // KEYBOARD
     useEffect(() => {
         const handleKey = (e) => {
             if (e.key === 'ArrowLeft') prevSlide();
@@ -49,10 +58,6 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
         document.addEventListener('keydown', handleKey);
         return () => document.removeEventListener('keydown', handleKey);
     }, [nextSlide, prevSlide]);
-
-    const goToSlide = (index) => {
-        setCurrentIndex(index);
-    };
 
     // SWIPE
     const handleTouchStart = (e) => {
@@ -65,9 +70,10 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
 
     const handleTouchEnd = () => {
         const diff = touchStartX.current - touchEndX.current;
-        const THRESHOLD = 50;
 
-        if (Math.abs(diff) < THRESHOLD) return;
+        if (Math.abs(diff) < 50) return;
+
+        clearInterval(intervalRef.current);
 
         if (diff > 0) nextSlide();
         else prevSlide();
@@ -103,12 +109,7 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
         };
 
         if (absOffset === 0) {
-            style = {
-                ...style,
-                transform: 'translate(-50%, -50%) scale(1)',
-                opacity: 1,
-                zIndex: 10,
-            };
+            style = { ...style, transform: 'translate(-50%, -50%) scale(1)', opacity: 1, zIndex: 10 };
         } else if (absOffset === 1) {
             style = {
                 ...style,
@@ -131,80 +132,98 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
                 zIndex: 2,
             };
         } else {
-            style = {
-                ...style,
-                transform: 'translate(-50%, -50%) scale(0.5)',
-                opacity: 0,
-                zIndex: 1,
-            };
+            style = { ...style, transform: 'translate(-50%, -50%) scale(0.5)', opacity: 0, zIndex: 1 };
         }
 
         return style;
     };
 
     return (
-        <>
-            {/* CAROUSEL */}
-            <div
-                className="carousel"
-                onTouchStart={handleTouchStart}
-                onTouchMove={handleTouchMove}
-                onTouchEnd={handleTouchEnd}
-            >
-                {portfolioData.map((data, index) => (
-                    <div
-                        key={data.id}
-                        className="carousel-item"
-                        style={getItemStyle(index)}
-                    >
-                        <div className="card">
-                            <div className="card-number">0{data.id}</div>
+        <section class="hero" id="hero">
+            <div className="carousel-container">
+                {/* CAROUSEL */}
+                <div
+                    id="carousel"
+                    className="carousel"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    {portfolioData.map((data, index) => (
+                        <div
+                            key={data.id}
+                            className="carousel-item"
+                            data-index={index}
+                            style={getItemStyle(index)}
+                        >
+                            <div className="card">
+                                <div className="card-number">0{data.id}</div>
 
-                            <div className="card-image">
-                                <img src={data.image} alt={data.title} />
+                                <div className="card-image">
+                                    <img src={data.image} alt={data.title} />
+                                </div>
+
+                                <h3 className="card-title">{data.title}</h3>
+                                <p className="card-description">{data.description}</p>
+
+                                <div className="card-tech">
+                                    {data.tech.map((tech) => (
+                                        <span key={tech} className="tech-badge">
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <button
+                                    className="card-cta"
+                                    onClick={() =>
+                                        data.projectLink === '404'
+                                            ? scrollToSection('about')
+                                            : openProjectLink(data.projectLink)
+                                    }
+                                >
+                                    {data.projectLink === '404' ? 'Explore' : 'Check'}
+                                </button>
                             </div>
-
-                            <h3 className="card-title">{data.title}</h3>
-                            <p className="card-description">{data.description}</p>
-
-                            <div className="card-tech">
-                                {data.tech.map((tech) => (
-                                    <span key={tech} className="tech-badge">
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <button
-                                className="card-cta"
-                                onClick={() =>
-                                    data.projectLink === '404'
-                                        ? scrollToSection('about')
-                                        : openProjectLink(data.projectLink)
-                                }
-                            >
-                                {data.projectLink === '404' ? 'Explore' : 'Check'}
-                            </button>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
 
-            {/* INDICATORS */}
-            <div className="indicators">
-                {portfolioData.map((_, index) => (
-                    <div
-                        key={index}
-                        className={`indicator ${index === currentIndex ? 'active' : ''}`}
-                        onClick={() => goToSlide(index)}
-                    />
-                ))}
-            </div>
+                {/* INDICATORS */}
+                <div id="indicators" className="indicators">
+                    {portfolioData.map((_, index) => (
+                        <div
+                            key={index}
+                            className={`indicator ${index === currentIndex ? 'active' : ''}`}
+                            data-index={index}
+                            onClick={() => goToSlide(index)}
+                        />
+                    ))}
+                </div>
 
-            {/* BUTTONS */}
-            <button onClick={prevSlide}>Prev</button>
-            <button onClick={nextSlide}>Next</button>
-        </>
+                {/* BUTTONS */}
+                <button
+                    id="prevBtn"
+                    onClick={() => {
+                        clearInterval(intervalRef.current);
+                        prevSlide();
+                    }}
+                >
+                    Prev
+                </button>
+
+                <button
+                    id="nextBtn"
+                    onClick={() => {
+                        clearInterval(intervalRef.current);
+                        nextSlide();
+                    }}
+                >
+                    Next
+                </button>
+
+            </div>
+        </section>
     );
 }
 
