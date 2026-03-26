@@ -7,14 +7,16 @@ import ContactSection from './old-containers/ContactSection';
 import Footer from './old-components/Footer';
 import './App.css';
 // import './global.css';
-import LoadingScreen from './components/loadingScreen';
-import Header from './components/Header';
+// import LoadingScreen from './components/loadingScreen';
+// import Header from './components/Header';
+// import HeroSection from './components/sections/Hero';
 
 function App() {
   return (
     <React.Fragment>
       {/* <LoadingScreen />
-      <Header /> */}
+      <Header />
+      <HeroSection /> */}
       <OldHeader />
       <WelcomeSection />
       <SliderSection />
