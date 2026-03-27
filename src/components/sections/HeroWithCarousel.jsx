@@ -190,7 +190,7 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
                 </div>
 
                 {/* INDICATORS */}
-                <div id="indicators" className="indicators">
+                <div id="indicators" className="carousel-indicators">
                     {portfolioData.map((_, index) => (
                         <div
                             key={index}
@@ -202,26 +202,29 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
                 </div>
 
                 {/* BUTTONS */}
-                <button
-                    id="prevBtn"
-                    onClick={() => {
-                        clearInterval(intervalRef.current);
-                        prevSlide();
-                    }}
-                >
-                    Prev
-                </button>
+                <div className='carousel-controls'>
+                    <button
+                        id="prevBtn"
+                        className='carousel-btn'
+                        onClick={() => {
+                            clearInterval(intervalRef.current);
+                            prevSlide();
+                        }}
+                    >
+                        {'<'}
+                    </button>
 
-                <button
-                    id="nextBtn"
-                    onClick={() => {
-                        clearInterval(intervalRef.current);
-                        nextSlide();
-                    }}
-                >
-                    Next
-                </button>
-
+                    <button
+                        id="nextBtn"
+                        className='carousel-btn'
+                        onClick={() => {
+                            clearInterval(intervalRef.current);
+                            nextSlide();
+                        }}
+                    >
+                        {'>'}
+                    </button>
+                </div>
             </div>
         </section>
     );
