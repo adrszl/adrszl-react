@@ -2,7 +2,7 @@ const AboutSection = () => {
     return (
         <section className="philosophy-section" id="about">
             <div className="philosophy-container">
-                <h2 style="font-size: 56px; margin-bottom: 2rem;">About</h2>
+                <h2 style={{fontSize: '56px', marginBottom: '2rem'}}>About</h2>
                 <div className="prism-line"></div>
 
                 <h3 className="about-headline">
@@ -26,111 +26,111 @@ const AboutSection = () => {
                     </div>
                 </div>
 
-                <h3 className="about-headline" style="margin: 160px 0 80px 0;">
+                <h3 className="about-headline" style={{margin: '160px 0 80px 0'}}>
                     Experience
                 </h3>
 
                 <div className="work-experience">
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Senior Fullstack Developer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Senior Fullstack Developer</h3>
                         <h4>FEB 2025 - DEC 2025</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             VIER
                         </p>
 
-                        <a href="https://www.vier.ai/en/" class="experience-link" target="_blank">
+                        <a href="https://www.vier.ai/en/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Senior Software Engineer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Senior Software Engineer</h3>
                         <h4>JUN 2022 - SEP 2024</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             IQVIA
                         </p>
 
-                        <a href="https://www.iqvia.com/" class="experience-link" target="_blank">
+                        <a href="https://www.iqvia.com/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Front End Developer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Front End Developer</h3>
                         <h4>APR 2020 - JUN 2022</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             TTMS
                         </p>
 
-                        <a href="https://ttms.pl/en/" class="experience-link" target="_blank">
+                        <a href="https://ttms.pl/en/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Full Stack Developer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Full Stack Developer</h3>
                         <h4>JUN 2019 - FEB 2020</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             OAKnode
                         </p>
 
-                        <a href="https://oaknode.com/" class="experience-link" target="_blank">
+                        <a href="https://oaknode.com/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Front End Developer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Front End Developer</h3>
                         <h4>JAN 2019 - APR 2019</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             Sealcode
                         </p>
 
-                        <a href="https://www.sealcode.org/" class="experience-link" target="_blank">
+                        <a href="https://www.sealcode.org/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Junior JavaScript/React Developer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Junior JavaScript/React Developer</h3>
                         <h4>DEC 2018 - DEC 2019</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             Nefeni Sp. z o.o.
                         </p>
 
-                        <a href="https://nefeni.pl/" class="experience-link" target="_blank">
+                        <a href="https://nefeni.pl/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Appium Tester</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Appium Tester</h3>
                         <h4>OCT 2017 - AUG 2018</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             Nefeni Sp. z o.o.
                         </p>
 
-                        <a href="https://nefeni.pl/" class="experience-link" target="_blank">
+                        <a href="https://nefeni.pl/" className="experience-link" target="_blank">
                             Website
                         </a>
 
                     </div>
                     {/* experience card */}
-                    <div class="experience">
-                        <h3 class="experience-title">Junior Front End Developer</h3>
+                    <div className="experience">
+                        <h3 className="experience-title">Junior Front End Developer</h3>
                         <h4>DEC 2016 - JUN 2017</h4>
-                        <p class="experience-description">
+                        <p className="experience-description">
                             Nefeni Sp. z o.o.
                         </p>
 
-                        <a href="https://nefeni.pl/" class="experience-link" target="_blank">
+                        <a href="https://nefeni.pl/" className="experience-link" target="_blank">
                             Website
                         </a>
 
