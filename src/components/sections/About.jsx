@@ -1,71 +1,86 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { certificatesData } from '../../data/certifications';
 
-const generateCertificates = () => {
-    return (
-        <>
-            {certificatesData.length ?
-                certificatesData.map((certificate, index) => (
-                    <div key={`certification-${certificate.date}-${certificate.title}`} className={`certificate ${index >= 9 ? 'hidden fade-out' : ''}`}>
-                        <h3 className="certificate-title">{certificate.title}</h3>
-                        <h4>{certificate.date}</h4>
-                        <p className="certificate-description">
-                            {certificate.description}
-                        </p>
-                        {certificate.link ? <a href={certificate.link}
-                            className="certificate-link"
-                            target="_blank"
-                            rel="noreferrer">
-                            Show certificate
-                        </a> : null}
-                    </div>
-                ))
-                : null}
-        </>
+// function toggleCertificationVisibility() {
 
 
-    );
-}
+//     showMoreButton.addEventListener('click', () => {
+//         expanded = !expanded;
 
-function toggleCertificationVisibility() {
+//         certificates.forEach((item, index) => {
+//             if (index >= 9) {
+//                 if (expanded) {
+//                     item.classList.remove('hidden');
+//                     requestAnimationFrame(() => {
+//                         requestAnimationFrame(() => {
+//                             item.classList.remove('fade-out');
+//                         });
+//                     });
 
+//                 } else {
+//                     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+//                     item.classList.add('fade-out');
 
-    // showMoreButton.addEventListener('click', () => {
-    //     expanded = !expanded;
+//                     item.addEventListener('transitionend', () => {
+//                         item.classList.add('hidden');
+//                         item.style.transition = '';
+//                     }, { once: true });
+//                 }
+//             }
+//         });
 
-    //     certificates.forEach((item, index) => {
-    //         if (index >= 9) {
-    //             if (expanded) {
-    //                 item.classList.remove('hidden');
-    //                 requestAnimationFrame(() => {
-    //                     requestAnimationFrame(() => {
-    //                         item.classList.remove('fade-out');
-    //                     });
-    //                 });
+//         showMoreButton.textContent = expanded ? 'Hide' : 'See more';
 
-    //             } else {
-    //                 item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    //                 item.classList.add('fade-out');
-
-    //                 item.addEventListener('transitionend', () => {
-    //                     item.classList.add('hidden');
-    //                     item.style.transition = '';
-    //                 }, { once: true });
-    //             }
-    //         }
-    //     });
-
-    //     showMoreButton.textContent = expanded ? 'Hide' : 'See more';
-
-    //     if (!expanded) {
-    //         const lastVisible = certificates[Math.min(8, certificates.length - 1)];
-    //         lastVisible.scrollIntoView({ behavior: 'smooth', block: 'end' });
-    //     }
-    // });
-}
+//         if (!expanded) {
+//             const lastVisible = certificates[Math.min(8, certificates.length - 1)];
+//             lastVisible.scrollIntoView({ behavior: 'smooth', block: 'end' });
+//         }
+//     });
+// }
 
 const AboutSection = () => {
     const [expanded, setExpanded] = useState(false);
+
+    const lastVisibleRef = useRef(null);
+
+    useEffect(() => {
+        if (!expanded && lastVisibleRef.current) {
+            lastVisibleRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+    }, [expanded]);
+
+    const generateCertificates = () => {
+        return certificatesData.map((certificate, index) => {
+            const isHidden = !expanded && index >= 9;
+
+            return (
+                <div
+                    key={`certification-${certificate.date}-${certificate.title}`}
+                    className={`certificate ${isHidden ? 'hidden fade-out' : ''}`}
+                    style={{
+                        transition: 'opacity 0.6s ease, transform 0.6s ease',
+                        opacity: isHidden ? 0 : 1,
+                        transform: isHidden ? 'translateY(-10px)' : 'translateY(0)',
+                    }}
+                    ref={index === 8 ? lastVisibleRef : null}
+                >
+                    <h3 className="certificate-title">{certificate.title}</h3>
+                    <h4>{certificate.date}</h4>
+                    <p className="certificate-description">{certificate.description}</p>
+                    {certificate.link && (
+                        <a
+                            href={certificate.link}
+                            className="certificate-link"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Show certificate
+                        </a>
+                    )}
+                </div>
+            );
+        });
+    };
 
     return (
         <section className="philosophy-section" id="about">
@@ -85,13 +100,11 @@ const AboutSection = () => {
                 <div id="certifications" className="certifications">
                     {/* Certificates will be generated generateCertificates function */}
                     {generateCertificates()}
-                    <button className="see-more-button"
+                    <button
+                        className="see-more-button"
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#restOfCertifications"
-                        aria-expanded="false"
-                        aria-controls="restOfCertifications"
-                        onClick={() => setExpanded(!expanded)}>
+                        onClick={() => setExpanded(!expanded)}
+                    >
                         {expanded ? 'Hide' : 'See more'}
                     </button>
 
