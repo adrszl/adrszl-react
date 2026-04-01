@@ -1,43 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { certificatesData } from '../../data/certifications';
 
-// function toggleCertificationVisibility() {
-
-
-//     showMoreButton.addEventListener('click', () => {
-//         expanded = !expanded;
-
-//         certificates.forEach((item, index) => {
-//             if (index >= 9) {
-//                 if (expanded) {
-//                     item.classList.remove('hidden');
-//                     requestAnimationFrame(() => {
-//                         requestAnimationFrame(() => {
-//                             item.classList.remove('fade-out');
-//                         });
-//                     });
-
-//                 } else {
-//                     item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-//                     item.classList.add('fade-out');
-
-//                     item.addEventListener('transitionend', () => {
-//                         item.classList.add('hidden');
-//                         item.style.transition = '';
-//                     }, { once: true });
-//                 }
-//             }
-//         });
-
-//         showMoreButton.textContent = expanded ? 'Hide' : 'See more';
-
-//         if (!expanded) {
-//             const lastVisible = certificates[Math.min(8, certificates.length - 1)];
-//             lastVisible.scrollIntoView({ behavior: 'smooth', block: 'end' });
-//         }
-//     });
-// }
-
 const AboutSection = () => {
     const [expanded, setExpanded] = useState(false);
 
