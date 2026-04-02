@@ -2,10 +2,20 @@ import { useState, useEffect, useRef, } from "react";
 import { certificatesData } from "../../data/certifications";
 
 const mapping = {
-    javascript: { icon: "🟨", label: "JavaScript" },
-    react: { icon: "⚛️", label: "React" },
-    css: { icon: "🎨", label: "CSS" },
-    html: { icon: "📄", label: "HTML" }
+    javascript: { icon: '🟨', label: 'JavaScript' },
+    react: { icon: '⚛️', label: 'React' },
+    redux: { icon: '🌀', label: 'Redux' },
+    typescript: { icon: '🟦', label: 'TypeScript' },
+    jquery: { icon: '💧', label: 'jQuery' },
+    html: { icon: '📄', label: 'HTML' },
+    css: { icon: '🎨', label: 'CSS' },
+    flexbox: { icon: '📐', label: 'Flexbox' },
+    bootstrap: { icon: '🅱️', label: 'Bootstrap' },
+    sass: { icon: '💅', label: 'SASS' },
+    npm: { icon: '📦', label: 'NPM' },
+    webpack: { icon: '📦', label: 'Webpack' },
+    wordpress: { icon: '📝', label: 'WordPress' },
+    other: { icon: '✨', label: 'Other' }
 };
 
 const CategoryTabs = ({ categories, activeCategory, setActiveCategory }) => {
@@ -131,13 +141,11 @@ const StatsSection = ({ certificates, activeCategory }) => {
     });
 
     return (
-        <section className="stats-section">
-            <div id="stats-grid">
-                {stats.map(stat => (
-                    <StatCard key={stat.label} {...stat} />
-                ))}
-            </div>
-        </section>
+        <>
+            {stats.map(stat => (
+                <StatCard key={stat.label} {...stat} />
+            ))}
+        </>
     );
 };
 
@@ -156,24 +164,26 @@ const SkillsCovered = () => {
 
     return (
         <section id="skills-covered" className="stats-section">
-            <div id="stats-grid">
-                <div>
-                    <CategoryTabs
-                        categories={categories}
-                        activeCategory={activeCategory}
-                        setActiveCategory={setActiveCategory}
-                    />
+            <div class="section-header">
+                <h2 class="section-title">Skills covered</h2>
+                <p class="section-subtitle">Crucial skills covered by the courses done by me, and the number of them.</p>
+            </div>
+            <div id="stats-grid" className="stats-grid">
+                {/* <CategoryTabs
+                    categories={categories}
+                    activeCategory={activeCategory}
+                    setActiveCategory={setActiveCategory}
+                /> */}
 
-                    <SkillsGrid
-                        certificates={certificatesData}
-                        activeCategory={activeCategory}
-                    />
+                <SkillsGrid
+                    certificates={certificatesData}
+                    activeCategory={activeCategory}
+                />
 
-                    <StatsSection
-                        certificates={certificatesData}
-                        activeCategory={activeCategory}
-                    />
-                </div>
+                <StatsSection
+                    certificates={certificatesData}
+                    activeCategory={activeCategory}
+                />
             </div>
         </section>
     );
