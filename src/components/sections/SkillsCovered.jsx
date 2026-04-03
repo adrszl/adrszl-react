@@ -18,24 +18,6 @@ const mapping = {
     other: { icon: '✨', label: 'Other' }
 };
 
-const CategoryTabs = ({ categories, activeCategory, setActiveCategory }) => {
-    return (
-        <div className="tabs">
-            {categories.map(cat => (
-                <button
-                    key={cat}
-                    className={`category-tab ${activeCategory === cat ? "active" : ""}`}
-                    onClick={() =>
-                        setActiveCategory(prev => (prev === cat ? "none" : cat))
-                    }
-                >
-                    {cat}
-                </button>
-            ))}
-        </div>
-    );
-};
-
 const SkillsGrid = ({ certificates, activeCategory }) => {
     if (activeCategory === "none") return null;
 
@@ -123,7 +105,7 @@ const StatCard = ({ icon, label, count, percentage }) => {
     );
 };
 
-const StatsSection = ({ certificates, activeCategory }) => {
+const StatsSection = ({ certificates }) => {
     const keywords = Object.keys(mapping);
 
     const total = certificates.length;
@@ -150,18 +132,6 @@ const StatsSection = ({ certificates, activeCategory }) => {
 };
 
 const SkillsCovered = () => {
-    const [activeCategory, setActiveCategory] = useState("none");
-
-    const categories = [
-        "all",
-        "javascript",
-        "react",
-        "redux",
-        "typescript",
-        "css",
-        "html"
-    ];
-
     return (
         <section id="skills-covered" className="stats-section">
             <div class="section-header">
@@ -175,15 +145,9 @@ const SkillsCovered = () => {
                     setActiveCategory={setActiveCategory}
                 /> */}
 
-                <SkillsGrid
-                    certificates={certificatesData}
-                    activeCategory={activeCategory}
-                />
+                <SkillsGrid certificates={certificatesData} />
 
-                <StatsSection
-                    certificates={certificatesData}
-                    activeCategory={activeCategory}
-                />
+                <StatsSection certificates={certificatesData} />
             </div>
         </section>
     );
