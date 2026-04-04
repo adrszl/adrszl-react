@@ -18,37 +18,6 @@ const mapping = {
     other: { icon: '✨', label: 'Other' }
 };
 
-const SkillsGrid = ({ certificates, activeCategory }) => {
-    if (activeCategory === "none") return null;
-
-    const filtered =
-        activeCategory === "all"
-            ? certificates
-            : certificates.filter(cert =>
-                cert.description.toLowerCase().includes(activeCategory)
-            );
-
-    return (
-        <div id="skillsGrid">
-            {filtered.map((cert, index) => (
-                <div
-                    key={cert.id || index}
-                    className="skill-hexagon"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                    <div className="hexagon-inner">
-                        <div className="hexagon-content">
-                            <div className="skill-icon-hex">📜</div>
-                            <div className="skill-name-hex">{cert.title}</div>
-                            <div className="skill-percentage-hex">{cert.date}</div>
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
-};
-
 const Counter = ({ target }) => {
     const [value, setValue] = useState(0);
     const [visible, setVisible] = useState(false);
@@ -123,11 +92,11 @@ const StatsSection = ({ certificates }) => {
     });
 
     return (
-        <>
+        <div id="stats-grid" className="stats-grid">
             {stats.map(stat => (
                 <StatCard key={stat.label} {...stat} />
             ))}
-        </>
+        </div>
     );
 };
 
@@ -138,17 +107,7 @@ const SkillsCovered = () => {
                 <h2 class="section-title">Skills covered</h2>
                 <p class="section-subtitle">Crucial skills covered by the courses done by me, and the number of them.</p>
             </div>
-            <div id="stats-grid" className="stats-grid">
-                {/* <CategoryTabs
-                    categories={categories}
-                    activeCategory={activeCategory}
-                    setActiveCategory={setActiveCategory}
-                /> */}
-
-                <SkillsGrid certificates={certificatesData} />
-
-                <StatsSection certificates={certificatesData} />
-            </div>
+            <StatsSection certificates={certificatesData} />
         </section>
     );
 };
