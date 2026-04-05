@@ -30,7 +30,7 @@ const SkillsGrid = ({ certificates, activeCategory }) => {
             );
 
     return (
-        <>
+        <div  id="skillsGrid" className="skills-hexagon-grid">
             {filtered.map((cert, index) => (
                 <div
                     key={cert.id || index}
@@ -46,7 +46,7 @@ const SkillsGrid = ({ certificates, activeCategory }) => {
                     </div>
                 </div>
             ))}
-        </>
+        </div>
     );
 };
 
@@ -64,18 +64,25 @@ const ChooseBySkillSection = () => {
     ];
 
     return (
-        <>
-            <CategoryTabs
-                categories={categories}
-                activeCategory={activeCategory}
-                setActiveCategory={setActiveCategory}
-            />
+        <section id="skills" className="skills-section particles">
+            <div class="skills-container">
+                <div class="section-header">
+                    <h2 class="section-title">Choose by skill</h2>
+                    <p class="section-subtitle">Skills covered by the certifications. Click to see.</p>
+                </div>
+
+                <CategoryTabs
+                    categories={categories}
+                    activeCategory={activeCategory}
+                    setActiveCategory={setActiveCategory}
+                />
+            </div>
 
             <SkillsGrid
                 certificates={certificatesData}
                 activeCategory={activeCategory}
             />
-        </>
+        </section>
     )
 }
 
