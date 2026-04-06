@@ -3,7 +3,7 @@ import { certificatesData } from "../../data/certifications";
 
 const CategoryTabs = ({ categories, activeCategory, setActiveCategory }) => {
     return (
-        <div className="tabs">
+        <div className="skill-categories">
             {categories.map(cat => (
                 <button
                     key={cat}
@@ -30,7 +30,7 @@ const SkillsGrid = ({ certificates, activeCategory }) => {
             );
 
     return (
-        <div  id="skillsGrid" className="skills-hexagon-grid">
+        <div id="skillsGrid" className="skills-hexagon-grid">
             {filtered.map((cert, index) => (
                 <div
                     key={cert.id || index}
@@ -59,8 +59,16 @@ const ChooseBySkillSection = () => {
         "react",
         "redux",
         "typescript",
+        "jquery",
+        "html",
         "css",
-        "html"
+        "flexbox",
+        "bootstrap",
+        "SASS",
+        "NPM",
+        "Webpack",
+        "Wordpress",
+        "Other"
     ];
 
     return (
@@ -76,12 +84,12 @@ const ChooseBySkillSection = () => {
                     activeCategory={activeCategory}
                     setActiveCategory={setActiveCategory}
                 />
-            </div>
 
-            <SkillsGrid
-                certificates={certificatesData}
-                activeCategory={activeCategory}
-            />
+                <SkillsGrid
+                    certificates={certificatesData}
+                    activeCategory={activeCategory}
+                />
+            </div>
         </section>
     )
 }
