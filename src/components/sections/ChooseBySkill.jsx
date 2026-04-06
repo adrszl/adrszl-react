@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { certificatesData } from "../../data/certifications";
+import Particles from "../Particles";
 
 const CategoryTabs = ({ categories, activeCategory, setActiveCategory }) => {
     return (
@@ -90,6 +91,8 @@ const ChooseBySkillSection = () => {
                     activeCategory={activeCategory}
                 />
             </div>
+
+            <Particles />
         </section>
     )
 }

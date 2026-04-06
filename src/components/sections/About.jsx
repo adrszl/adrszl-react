@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { certificatesData } from '../../data/certifications';
+import Particles from '../Particles';
 
 const AboutSection = () => {
     const [expanded, setExpanded] = useState(false);
@@ -72,7 +73,7 @@ const AboutSection = () => {
                     </button>
 
                     <div className="philosophy-particles particles" id="particles">
-                        {/* Particles will be generated generateCertificates function */}
+                        <Particles />
                     </div>
                 </div>
 
