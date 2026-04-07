@@ -74,10 +74,10 @@ const ChooseBySkillSection = () => {
 
     return (
         <section id="skills" className="skills-section particles">
-            <div class="skills-container">
-                <div class="section-header">
-                    <h2 class="section-title">Choose by skill</h2>
-                    <p class="section-subtitle">Skills covered by the certifications. Click to see.</p>
+            <div className="skills-container">
+                <div className="section-header">
+                    <h2 className="section-title">Choose by skill</h2>
+                    <p className="section-subtitle">Skills covered by the certifications. Click to see.</p>
                 </div>
 
                 <CategoryTabs
