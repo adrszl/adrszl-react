@@ -22,15 +22,15 @@ const CategoryTabs = ({ categories, activeCategory, setActiveCategory }) => {
 
 const SkillsGrid = ({ certificates, activeCategory }) => {
     if (activeCategory === "none") return null;
-
+    
     const filtered =
         activeCategory === "all"
             ? certificates
             : certificates.filter(cert =>
-                cert.description.toLowerCase().includes(activeCategory)
+                cert.description.toLowerCase().includes(activeCategory.toLowerCase())
             );
-
-    return (
+    
+            return (
         <div id="skillsGrid" className="skills-hexagon-grid">
             {filtered.map((cert, index) => (
                 <div
