@@ -1,6 +1,12 @@
-const Header = () => {
+import { forwardRef } from "react";
+
+const Header = forwardRef(({ activeSection, onNavigate }, ref) => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
-        <header className="header" id="header">
+        <header ref={ref} className="header" id="header">
             <nav className="nav-container">
                 <a href="#" className="logo">
                     <div className="logo-icon">
@@ -15,10 +21,18 @@ const Header = () => {
                 </a>
 
                 <ul className="nav-menu" id="navMenu">
-                    <li><a href="#home" className="nav-link active">Home</a></li>
-                    <li><a href="#projects" className="nav-link">Projects</a></li>
-                    <li><a href="#about" className="nav-link">About</a></li>
-                    <li><a href="#contact" className="nav-link">Contact</a></li>
+                    <li onClick={() => onNavigate('home')}>
+                        <a href="#" className={`nav-link  ${activeSection === 'home' ? "active" : ""}`} onClick={scrollToTop}>Home</a>
+                    </li>
+                    <li onClick={() => onNavigate('projects')}>
+                        <a href="#projects" className={`nav-link  ${activeSection === 'projects' ? "active" : ""}`}>Projects</a>
+                    </li>
+                    <li onClick={() => onNavigate('about')}>
+                        <a href="#about" className={`nav-link  ${activeSection === 'about' ? "active" : ""}`}>About</a>
+                    </li>
+                    <li onClick={() => onNavigate('contact')}>
+                        <a href="#contact" className={`nav-link  ${activeSection === 'contact' ? "active" : ""}`}>Contact</a>
+                    </li>
                 </ul>
 
                 <div className="menu-toggle" id="menuToggle">
@@ -29,6 +43,6 @@ const Header = () => {
             </nav>
         </header>
     );
-}
+});
 
 export default Header;

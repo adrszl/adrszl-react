@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, forwardRef } from 'react';
 import { certificatesData } from '../../data/certifications';
 import Particles from '../Particles';
 
-const AboutSection = () => {
+const AboutSection = forwardRef((props, ref) => {
     const [expanded, setExpanded] = useState(false);
 
     const lastVisibleRef = useRef(null);
@@ -47,7 +47,7 @@ const AboutSection = () => {
     };
 
     return (
-        <section className="philosophy-section" id="about">
+        <section className="philosophy-section" id="about" ref={ref}>
             <div className="philosophy-container">
                 <h2 style={{ fontSize: '56px', marginBottom: '2rem' }}>About</h2>
                 <div className="prism-line"></div>
@@ -191,6 +191,6 @@ const AboutSection = () => {
             </div>
         </section>
     );
-}
+});
 
 export default AboutSection;

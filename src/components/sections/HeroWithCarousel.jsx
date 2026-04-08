@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, forwardRef } from 'react';
 import { scrollToSection, openProjectLink } from '../../lib/helpers';
 
-const HeroWithCarouselSection = ({ portfolioData }) => {
+const HeroWithCarouselSection = forwardRef(({ portfolioData }, ref) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [isTablet, setIsTablet] = useState(window.innerWidth <= 1024);
@@ -139,7 +139,7 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
     };
 
     return (
-        <section className="hero" id="hero">
+        <section className="hero" id="projects" ref={ref}>
             <div className="carousel-container">
                 {/* CAROUSEL */}
                 <div
@@ -228,6 +228,6 @@ const HeroWithCarouselSection = ({ portfolioData }) => {
             </div>
         </section>
     );
-}
+});
 
 export default HeroWithCarouselSection;
