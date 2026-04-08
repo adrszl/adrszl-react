@@ -8,7 +8,7 @@ const antiSpamStyles = {
 
 function ContactForm() {
     return (
-        <div id="contactForm">
+        <div id="oldContactForm">
             <form action="https://app.99inbound.com/api/e/ZcuIhPX9" method="POST" target="_blank">
                 <h2 className="text-center">Contact me:</h2>
                 <p id="errorHandler" className="text-center"></p>
