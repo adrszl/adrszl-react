@@ -1,55 +1,8 @@
 import { useState } from "react";
 import { certificatesData } from "../../data/certifications";
 import Particles from "../Particles";
-
-const CategoryTabs = ({ categories, activeCategory, setActiveCategory }) => {
-    return (
-        <div className="skill-categories">
-            {categories.map(cat => (
-                <button
-                    key={cat}
-                    className={`category-tab ${activeCategory === cat ? "active" : ""}`}
-                    onClick={() =>
-                        setActiveCategory(prev => (prev === cat ? "none" : cat))
-                    }
-                >
-                    {cat}
-                </button>
-            ))}
-        </div>
-    );
-};
-
-const SkillsGrid = ({ certificates, activeCategory }) => {
-    if (activeCategory === "none") return null;
-    
-    const filtered =
-        activeCategory === "all"
-            ? certificates
-            : certificates.filter(cert =>
-                cert.description.toLowerCase().includes(activeCategory.toLowerCase())
-            );
-    
-            return (
-        <div id="skillsGrid" className="skills-hexagon-grid">
-            {filtered.map((cert, index) => (
-                <div
-                    key={cert.id || index}
-                    className="skill-hexagon"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                    <div className="hexagon-inner">
-                        <div className="hexagon-content">
-                            <div className="skill-icon-hex">📜</div>
-                            <div className="skill-name-hex">{cert.title}</div>
-                            <div className="skill-percentage-hex">{cert.date}</div>
-                        </div>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
-};
+import CategoryTabs from "../CategoryTabs";
+import SkillsGrid from "../SkillsGrid";
 
 const ChooseBySkillSection = () => {
     const [activeCategory, setActiveCategory] = useState("none");
