@@ -3,7 +3,7 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <footer className="text-center">
+        <footer className="text-center old-footer">
             &copy; 2018 - {new Date().getFullYear()} Adrian Szlegel
         </footer>
     );
