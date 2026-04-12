@@ -12,13 +12,13 @@ function ContactForm() {
             <form action="https://app.99inbound.com/api/e/ZcuIhPX9" method="POST" target="_blank">
                 <h2 className="text-center">Contact me:</h2>
                 <p id="errorHandler" className="text-center"></p>
-                <div className="form-group">
+                <div className="form-group mb-3">
                     <label for="email">Email address</label>
                     <input type="email" name="emailAdress" className="form-control" id="email" placeholder="name@example.com" required />
                     <label for="name">Name/company name</label>
                     <input type="text" name="companyName" className="form-control" id="name" placeholder="name/company name" aria-label="Name/company name" />
                 </div>
-                <div className="form-group">
+                <div className="form-group mb-3">
                     <label for="message">Message</label>
                     <textarea name="messageContent" className="form-control" id="message" rows="3" required></textarea>
                 </div>

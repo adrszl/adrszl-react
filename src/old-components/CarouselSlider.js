@@ -45,15 +45,15 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project10} alt="Tenth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.commercialWebsite1 }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-1">{ tooltipsContent.commercialWebsite1 }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Website</span>
-                            <span className="badge badge-secondary mr-2">2019</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary mr-2">CSS</span>
-                            <span className="badge badge-pill badge-primary mr-2">JS</span>
-                            <span className="badge badge-pill badge-primary mr-2">PHP</span>
-                            <span className="badge badge-pill badge-primary">Wordpress</span>
+                            <span className="me-2">Website</span>
+                            <span className="badge bg-secondary me-2">2019</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary me-2">CSS</span>
+                            <span className="badge rounded-pill bg-primary me-2">JS</span>
+                            <span className="badge rounded-pill bg-primary me-2">PHP</span>
+                            <span className="badge rounded-pill bg-primary">Wordpress</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -61,15 +61,15 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project13} alt="Thirteenth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.commercialWebsite4 }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-2">{ tooltipsContent.commercialWebsite4 }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Website</span>
-                            <span className="badge badge-secondary mr-2">2018 - now</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary mr-2">CSS</span>
-                            <span className="badge badge-pill badge-primary mr-2">JS</span>
-                            <span className="badge badge-pill badge-primary mr-2">PHP</span>
-                            <span className="badge badge-pill badge-primary">Wordpress</span>
+                            <span className="me-2">Website</span>
+                            <span className="badge bg-secondary me-2">2018 - now</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary me-2">CSS</span>
+                            <span className="badge rounded-pill bg-primary me-2">JS</span>
+                            <span className="badge rounded-pill bg-primary me-2">PHP</span>
+                            <span className="badge rounded-pill bg-primary">Wordpress</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -77,12 +77,12 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project1} alt="First project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.personalPortfolio }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-3">{ tooltipsContent.personalPortfolio }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Personal Portfolio Webpage</span>
-                            <span className="badge badge-secondary mr-2">2018</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary">CSS</span>
+                            <span className="me-2">Personal Portfolio Webpage</span>
+                            <span className="badge bg-secondary me-2">2018</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary">CSS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -90,12 +90,12 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project2} alt="Second project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.tributePage }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-4">{ tooltipsContent.tributePage }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Tribute Page (Simple Landing Page)</span>
-                            <span className="badge badge-secondary mr-2">2018</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary">CSS</span>
+                            <span className="me-2">Tribute Page (Simple Landing Page)</span>
+                            <span className="badge bg-secondary me-2">2018</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary">CSS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -103,12 +103,12 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project3} alt="Third project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.surveyForm }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-5">{ tooltipsContent.surveyForm }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Survey Form</span>
-                            <span className="badge badge-secondary mr-2">2018</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary">CSS</span>
+                            <span className="me-2">Survey Form</span>
+                            <span className="badge bg-secondary me-2">2018</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary">CSS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -116,12 +116,12 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project4} alt="Fourth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.productLandingPage }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-6">{ tooltipsContent.productLandingPage }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Product Landing Page</span>
-                            <span className="badge badge-secondary mr-2">2018</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary">CSS</span>
+                            <span className="me-2">Product Landing Page</span>
+                            <span className="badge bg-secondary me-2">2018</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary">CSS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -129,12 +129,12 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project5} alt="Fifth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.technicalDocumentationPage }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-7">{ tooltipsContent.technicalDocumentationPage }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Technical Documentation Page</span>
-                            <span className="badge badge-secondary mr-2">2018</span>
-                            <span className="badge badge-pill badge-primary mr-2">HTML</span>
-                            <span className="badge badge-pill badge-primary">CSS</span>
+                            <span className="me-2">Technical Documentation Page</span>
+                            <span className="badge bg-secondary me-2">2018</span>
+                            <span className="badge rounded-pill bg-primary me-2">HTML</span>
+                            <span className="badge rounded-pill bg-primary">CSS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -142,11 +142,11 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project6} alt="Sixth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.romanNumeralConverter }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-8">{ tooltipsContent.romanNumeralConverter }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Roman Numeral Converter</span>
-                            <span className="badge badge-secondary mr-2">2019</span>
-                            <span className="badge badge-pill badge-primary">JS</span>
+                            <span className="me-2">Roman Numeral Converter</span>
+                            <span className="badge bg-secondary me-2">2019</span>
+                            <span className="badge rounded-pill bg-primary">JS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -154,11 +154,11 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project7} alt="Seventh project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.palindromeChecker }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-9">{ tooltipsContent.palindromeChecker }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Palindrome Checker</span>
-                            <span className="badge badge-secondary mr-2">2019</span>
-                            <span className="badge badge-pill badge-primary">JS</span>
+                            <span className="me-2">Palindrome Checker</span>
+                            <span className="badge bg-secondary me-2">2019</span>
+                            <span className="badge rounded-pill bg-primary">JS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -166,11 +166,11 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project8} alt="Eighth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.usTelephoneNumberValidator }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-10">{ tooltipsContent.usTelephoneNumberValidator }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">US Telephone Number Validator</span>
-                            <span className="badge badge-secondary mr-2">2019</span>
-                            <span className="badge badge-pill badge-primary">JS</span>
+                            <span className="me-2">US Telephone Number Validator</span>
+                            <span className="badge bg-secondary me-2">2019</span>
+                            <span className="badge rounded-pill bg-primary">JS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
@@ -178,11 +178,11 @@ function CarouselSlider() {
             <Carousel.Item>
                 <img className="d-block w-100" src={project9} alt="Nineth project" />
                 <Carousel.Caption>
-                    <OverlayTrigger overlay={<Tooltip>{ tooltipsContent.caesarsCipher }</Tooltip>}>
+                    <OverlayTrigger overlay={<Tooltip id="tooltip-11">{ tooltipsContent.caesarsCipher }</Tooltip>}>
                         <h3 className="slide-title">
-                            <span className="mr-2">Caesars Cipher</span>
-                            <span className="badge badge-secondary mr-2">2019</span>
-                            <span className="badge badge-pill badge-primary">JS</span>
+                            <span className="me-2">Caesars Cipher</span>
+                            <span className="badge bg-secondary me-2">2019</span>
+                            <span className="badge rounded-pill bg-primary">JS</span>
                         </h3>
                     </OverlayTrigger>
                 </Carousel.Caption>
