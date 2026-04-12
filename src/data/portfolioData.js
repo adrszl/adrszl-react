@@ -14,12 +14,12 @@ import project13 from '../img/project13.png';
 import project14 from '../img/project14.png';
 import project15 from '../img/project15.png';
 import project16 from '../img/project16.png';
-// import project17 from '../img/project17.png';
-// import project18 from '../img/project18.png';
-// import project19 from '../img/project19.png';
-// import project20 from '../img/project20.png';
-// import project21 from '../img/project21.png';
-// import project22 from '../img/project22.png';
+import project17 from '../img/project17.png';
+import project18 from '../img/project18.png';
+import project19 from '../img/project19.png';
+import project20 from '../img/project20.png';
+import project21 from '../img/project21.png';
+import project22 from '../img/project22.png';
 
 // Portfolio data for carousel
 export const portfolioData = [
@@ -150,5 +150,53 @@ export const portfolioData = [
         image: project9,
         tech: ['JS'],
         projectLink: 'https://codepen.io/adrszl/full/wNGqKE'
+    },
+    {
+        id: 17,
+        title: 'Website - 2024',
+        description: 'Website for Univice',
+        image: project17,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: '404'
+    },
+    {
+        id: 18,
+        title: 'Website - 2023',
+        description: 'E-commerce website for Derby Hats',
+        image: project18,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress', 'WooCommerce'],
+        projectLink: '404'
+    },
+    {
+        id: 19,
+        title: 'Website - 2022',
+        description: 'Website for Our Words - world for RPG players',
+        image: project19,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: '404'
+    },
+    {
+        id: 20,
+        title: 'Website - 2022',
+        description: 'Website for Cobra Wrap Art',
+        image: project20,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: '404'
+    },
+    {
+        id: 21,
+        title: 'Website - 2022',
+        description: 'Website for IJE',
+        image: project21,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: '404'
+    },
+    {
+        id: 22,
+        title: 'Website - 2020',
+        description: 'Website for City Link',
+        image: project22,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: 'https://city-link.pl/'
     },
 ];
