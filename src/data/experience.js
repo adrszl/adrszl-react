@@ -1,5 +1,6 @@
 import upWorkLogo from '../img/upwork-logo.svg';
 import gitHubLogo from '../img/github-logo.png';
+import freeCodeCampLogo from '../img/freeCodeCamp-logo.svg';
 
 export const freelacePlatforms = [
     {
@@ -75,8 +76,8 @@ export const otherPlatformsPresence = [
         iconAlt: 'Netlify'
     },
     {
-        link: 'freecodecamp',
-        icon: 'freecodecamp',
-        iconAlt: 'Free Code Camp'
+        link: 'https://www.freecodecamp.org/adrian-szlegel',
+        icon: freeCodeCampLogo,
+        iconAlt: 'FreeCodeCamp'
     }
 ];
