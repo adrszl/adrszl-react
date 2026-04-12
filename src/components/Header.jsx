@@ -8,7 +8,7 @@ const Header = forwardRef(({ activeSection, onNavigate }, ref) => {
     return (
         <header ref={ref} className="header" id="header">
             <nav className="nav-container">
-                <a href="#" className="logo">
+                <a href="#home" className="logo">
                     <div className="logo-icon">
                         <div className="logo-prism">
                             <div className="prism-shape"></div>
@@ -22,7 +22,7 @@ const Header = forwardRef(({ activeSection, onNavigate }, ref) => {
 
                 <ul className="nav-menu" id="navMenu">
                     <li onClick={() => onNavigate('home')}>
-                        <a href="#" className={`nav-link  ${activeSection === 'home' ? "active" : ""}`} onClick={scrollToTop}>Home</a>
+                        <a href="#home" className={`nav-link  ${activeSection === 'home' ? "active" : ""}`} onClick={scrollToTop}>Home</a>
                     </li>
                     <li onClick={() => onNavigate('projects')}>
                         <a href="#projects" className={`nav-link  ${activeSection === 'projects' ? "active" : ""}`}>Projects</a>

@@ -14,12 +14,12 @@ import project13 from '../img/project13.png';
 import project14 from '../img/project14.png';
 import project15 from '../img/project15.png';
 import project16 from '../img/project16.png';
-import project17 from '../img/project17.png';
-import project18 from '../img/project18.png';
-import project19 from '../img/project19.png';
-import project20 from '../img/project20.png';
-import project21 from '../img/project21.png';
-import project22 from '../img/project22.png';
+// import project17 from '../img/project17.png';
+// import project18 from '../img/project18.png';
+// import project19 from '../img/project19.png';
+// import project20 from '../img/project20.png';
+// import project21 from '../img/project21.png';
+// import project22 from '../img/project22.png';
 
 // Portfolio data for carousel
 export const portfolioData = [

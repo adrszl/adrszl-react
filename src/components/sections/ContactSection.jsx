@@ -14,7 +14,7 @@ const WorkExperience = () => {
                     <p className="experience-description">
                         {platformData.description}
                     </p>
-                    <a className="experience-link" href={platformData.link} target="_blank">{platformData.linkText}</a>
+                    <a className="experience-link" href={platformData.link} target="_blank" rel="noreferrer">{platformData.linkText}</a>
                 </div>
             )) : null}
         </div>
@@ -25,7 +25,7 @@ const OtherPlatformsPresence = () => {
     return (
         <div className="platforms-container" style={{ marginBottom: '80px' }}>
             {otherPlatformsPresence.length ? otherPlatformsPresence.map(platformData => (
-                <a key={platformData.iconAlt} href={platformData.link} target="_blank">
+                <a key={platformData.iconAlt} href={platformData.link} target="_blank" rel="noreferrer">
                     <img src={platformData.icon} alt={platformData.iconAlt} style={{backgroundColor: platformData.iconAlt === 'FreeCodeCamp' ? '#000' : null}} />
                 </a>
             )) : null}
@@ -41,7 +41,7 @@ const ContactSection = forwardRef((props, ref) => {
                 <div className="prism-line" style={{ maxWidth: '1200px' }}></div>
             </div>
 
-            <img src={profilePicture} style={{ boxShadow: '0px 0px 80px #000', borderRadius: '10px', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginTop: '160px', marginBottom: '80px' }} />
+            <img src={profilePicture} style={{ boxShadow: '0px 0px 80px #000', borderRadius: '10px', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginTop: '160px', marginBottom: '80px' }} alt="Adrian Szlegel" />
 
             <WorkExperience />
 
@@ -51,7 +51,7 @@ const ContactSection = forwardRef((props, ref) => {
 
             <div className="contact-container">
                 <div className="contact-info">
-                    <a href="https://maps.app.goo.gl/Xxebn2cWUSAMHtU29" target="_blank" className="info-item">
+                    <a href="https://maps.app.goo.gl/Xxebn2cWUSAMHtU29" target="_blank" rel="noreferrer" className="info-item">
                         <div className="info-icon">📍</div>
                         <div className="info-text">
                             <h4>Location</h4>
@@ -59,7 +59,7 @@ const ContactSection = forwardRef((props, ref) => {
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/adrian-szlegel/" target="_blank" className="info-item">
+                    <a href="https://www.linkedin.com/in/adrian-szlegel/" target="_blank" rel="noreferrer" className="info-item">
                         <div className="info-icon">📧</div>
                         <div className="info-text">
                             <h4>LinkedIn</h4>

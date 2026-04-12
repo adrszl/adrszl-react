@@ -22,14 +22,14 @@ const FooterSection = () => {
                         forget to visit my LinkedIn profile.
                     </p>
                     <div className="footer-social">
-                        <a href="https://www.linkedin.com/in/adrian-szlegel/" target="_blank" className="social-icon">in</a>
+                        <a href="https://www.linkedin.com/in/adrian-szlegel/" target="_blank" rel="noreferrer" className="social-icon">in</a>
                     </div>
                 </div>
 
                 <div className="footer-section">
                     <h4>Sections</h4>
                     <div className="footer-links">
-                        <a href="#" onClick={() => scrollToSection('home')}>Home</a>
+                        <a href="#home" onClick={() => scrollToSection('home')}>Home</a>
                         <a href="#projects" onClick={() => scrollToSection('projects')}>Projects</a>
                         <a href="#about" onClick={() => scrollToSection('about')}>About</a>
                         <a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a>

@@ -1,10 +1,10 @@
 import React, { useState, useMemo, createRef, useRef, useEffect } from 'react';
-import OldHeader from './old-components/OldHeader';
-import WelcomeSection from './old-components/WelcomeSection';
-import SliderSection from './old-containers/SliderSection';
+// import OldHeader from './old-components/OldHeader';
+// import WelcomeSection from './old-components/WelcomeSection';
+// import SliderSection from './old-containers/SliderSection';
 // import AboutSection from './old-containers/AboutSection';
-import OldContactSection from './old-containers/ContactSection';
-import Footer from './old-components/Footer';
+// import OldContactSection from './old-containers/ContactSection';
+// import Footer from './old-components/Footer';
 // import './App.css';
 import './global.css';
 import LoadingScreen from './components/loadingScreen';
@@ -64,12 +64,6 @@ function App() {
       <ChooseBySkillSection />
       <ContactSection ref={sectionRefs.contact} />
       <FooterSection />
-      {/* <OldHeader />
-      <WelcomeSection />
-      <SliderSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer /> */}
     </React.Fragment>
   );
 }

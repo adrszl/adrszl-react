@@ -19,17 +19,17 @@ const HeroSection = forwardRef((props, ref) => {
         };
     }, []);
 
-    const mergeRefs = (...refs) => (el) => {
-        refs.forEach(ref => {
-            if (!ref) return;
+    // const mergeRefs = (...refs) => (el) => {
+    //     refs.forEach(ref => {
+    //         if (!ref) return;
 
-            if (typeof ref === "function") {
-                ref(el);
-            } else {
-                ref.current = el;
-            }
-        });
-    };
+    //         if (typeof ref === "function") {
+    //             ref(el);
+    //         } else {
+    //             ref.current = el;
+    //         }
+    //     });
+    // };
 
     return (
         <section className="hero" id="home" style={{ flexDirection: 'column' }} ref={ref}>
