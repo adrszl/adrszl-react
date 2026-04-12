@@ -6,17 +6,10 @@ import AboutSection from './old-containers/AboutSection';
 import ContactSection from './old-containers/ContactSection';
 import Footer from './old-components/Footer';
 import './App.css';
-// import './global.css';
-// import LoadingScreen from './components/loadingScreen';
-// import Header from './components/Header';
-// import HeroSection from './components/sections/Hero';
 
-function App() {
+function OldVersionApp() {
   return (
     <React.Fragment>
-      {/* <LoadingScreen />
-      <Header />
-      <HeroSection /> */}
       <OldHeader />
       <WelcomeSection />
       <SliderSection />
@@ -27,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default OldVersionApp;
