@@ -26,7 +26,7 @@ const OtherPlatformsPresence = () => {
         <div className="platforms-container" style={{ marginBottom: '80px' }}>
             {otherPlatformsPresence.length ? otherPlatformsPresence.map(platformData => (
                 <a key={platformData.iconAlt} href={platformData.link} target="_blank">
-                    <img src={platformData.icon} alt={platformData.iconAlt} />
+                    <img src={platformData.icon} alt={platformData.iconAlt} style={{backgroundColor: platformData.iconAlt === 'FreeCodeCamp' ? '#000' : null}} />
                 </a>
             )) : null}
         </div>
