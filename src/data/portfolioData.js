@@ -20,6 +20,7 @@ import project19 from '../img/project19.png';
 import project20 from '../img/project20.png';
 import project21 from '../img/project21.png';
 import project22 from '../img/project22.png';
+import project23 from '../img/project23.png';
 
 // Portfolio data for carousel
 export const portfolioData = [
@@ -198,5 +199,13 @@ export const portfolioData = [
         image: project22,
         tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
         projectLink: 'https://city-link.pl/'
+    },
+    {
+        id: 23,
+        title: 'Website - 2025',
+        description: 'Website for JarPol Construction Company',
+        image: project23,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: 'https://jarpolconstruction.eu/'
     },
 ];
