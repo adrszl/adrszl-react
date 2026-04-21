@@ -21,6 +21,7 @@ import project20 from '../img/project20.png';
 import project21 from '../img/project21.png';
 import project22 from '../img/project22.png';
 import project23 from '../img/project23.png';
+import project24 from '../img/project24.png';
 
 // Portfolio data for carousel
 export const portfolioData = [
@@ -207,5 +208,13 @@ export const portfolioData = [
         image: project23,
         tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
         projectLink: 'https://jarpolconstruction.eu/'
+    },
+    {
+        id: 24,
+        title: 'Website - 2025',
+        description: 'Website for Kozi Studio, with audio player and videos slider',
+        image: project24,
+        tech: ['HTML', 'CSS', 'JS', 'PHP', 'Wordpress'],
+        projectLink: 'https://kozistudio.co.uk/'
     },
 ];
