@@ -31,7 +31,7 @@ function ContactSection() {
                 {/* <p id="photoSource" className="text-center">Photo source: www.programmerlife.club</p> */}
                 <img id="authorsPhoto" src={myPhoto} alt="Adrian Szlegel" />
             </div>
-            <div class="d-flex flex-row flex-wrap justify-content-center mb-5">
+            <div className="d-flex flex-row flex-wrap justify-content-center mb-5">
                 <ContactCard
                     logo={fiverrLogo}
                     logoAlt={"Fiverr"}
@@ -56,8 +56,8 @@ function ContactSection() {
                     customImgClasses={"mt-auto"} 
                     customImgStyles={{width: "76px"}} />
             </div>
-            <h2 class="text-center mb-4">You'll also find me here:</h2>
-            <div class="d-flex flex-row flex-wrap justify-content-center mb-5">
+            <h2 className="text-center mb-4">You'll also find me here:</h2>
+            <div className="d-flex flex-row flex-wrap justify-content-center mb-5">
                 <MediaCard
                     logo={soloLearnLogo}
                     logoAlt={"SoloLearn"}
